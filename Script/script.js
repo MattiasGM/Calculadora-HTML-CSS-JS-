@@ -3,12 +3,23 @@ delet.addEventListener('click', del)
 clear.addEventListener('click', cle)
 
 function insert(num) {
+    let valor = document.form.textview.value.slice(-1)
+    let n = typeof(num)
+
+    if(valor == '' && num != '-') {
+    }else if(valor != '+' && valor != '-' && valor != '*' && valor != '/') {
         document.form.textview.value = document.form.textview.value + num
+    }else if(n == 'number') {
+        document.form.textview.value = document.form.textview.value + num
+    }
 }
 
 function result() {
     let res = document.form.textview.value
-    if(res) {
+    if(res.slice(-1) == '+' || res.slice(-1) == '-' || res.slice(-1) == '*' || res.slice(-1) == '/'){
+        let res = document.form.textview.value
+        document.form.textview.value = res.substring(0, res.length-1)
+    }else if(res) {
         document.form.textview.value = eval(res)
     } else {
         alert('[ERRO]Entrada inválida')
