@@ -10,6 +10,8 @@ function result() {
     let res = document.form.textview.value
     if(res) {
         document.form.textview.value = eval(res)
+    } else {
+        alert('[ERRO]Entrada inválida')
     }
 }
 
