@@ -4,12 +4,9 @@ clear.addEventListener('click', cle)
 
 function insert(num) {
     let valor = document.form.textview.value.slice(-1)
-    let n = typeof(num)
+    let n = typeof num
 
-    if(valor == '' && num != '-') {
-    }else if(valor != '+' && valor != '-' && valor != '*' && valor != '/') {
-        document.form.textview.value = document.form.textview.value + num
-    }else if(n == 'number') {
+    if(valor != '+' && valor != '-' && valor != '*' && valor != '/' && valor != '' || n == 'number' || valor == '' && num == '-') {
         document.form.textview.value = document.form.textview.value + num
     }
 }
