@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212 url(../img1.png);
+    color: white;
+}
+
+header, footer {
+    text-align: center;
+}
+
+section {
+    padding: 5px;
+}
+
+input {
+    background: #121212a4;
+    border: 2px outset rgba(255, 0, 0, 0.493);
+    border-radius: 50%;
+    color: white;
+    box-shadow: -1px -1px 1px 1px red;
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+td :hover {
+    background: #111111;
+    box-shadow: none;
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
+}
+
+#teclado {
+    display: flex;
+}
+
+#numbers input {
+    width: calc(4vw + 50px);
+    height: calc(4vw + 50px);
+}
+
+#limpadores {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 0 0 4px 8px;
+    border-left: 2px groove rgba(255, 0, 0, 0.493);
+
+    border-bottom: 2px groove rgba(255, 0, 0, 0.493);
+}
+
+#limpadores input {
+    width: calc(4vw + 18px);
+    height: calc(4vw + 18px);
+}
+#operators {
+    display: flex;
+    flex-flow: column;
+    padding: 4px 0 0 8px;
+    border-left: 2px groove rgba(255, 0, 0, 0.493);
+}
+
+#operators input {
+    width: calc(4vw + 28px);
+    height: calc(4vw + 28px);
+}
+
+#textview{
+    width: calc(16vw + 200px);
+    height: calc(4vw + 28px);
+    background: #525252b6;
+    margin: 0 0 10px 0;
+
+    display: flex;
+    text-align: right;
+
+    font-size: 2em;
+    border: none;
+    border-radius: 5px;
+}
+
+.corpoCalc {
+    background: #2929297e;
+    box-shadow: 1px 1px 6px 1px red;
+}
