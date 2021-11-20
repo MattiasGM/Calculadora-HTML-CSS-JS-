@@ -8,17 +8,12 @@ body {
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
     background: #121212 url(../img1.png);
     color: white;
 }
 
 header, footer {
     text-align: center;
-}
-
-section {
-    padding: 5px;
 }
 
 input {
@@ -98,4 +93,5 @@ td :hover {
 .corpoCalc {
     background: #2929297e;
     box-shadow: 1px 1px 6px 1px red;
+    padding: 5px;
 }
