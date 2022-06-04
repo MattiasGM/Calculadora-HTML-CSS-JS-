@@ -29,5 +29,5 @@ function del() {
 }
 
 function cle() {
-    document.form.textview.value = ''
+    document.form.textview.value = null
 }
