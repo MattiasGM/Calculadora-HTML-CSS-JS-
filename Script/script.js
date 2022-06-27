@@ -1,33 +1,37 @@
+let valor = document.querySelector('#textview')
+
 equal.addEventListener('click', result)
 delet.addEventListener('click', del)
 clear.addEventListener('click', cle)
 
-function insert(num) {
-    let valor = document.form.textview.value.slice(-1)
-    let n = typeof num
+document.addEventListener('keyup', e => {
+    if(e.key === 'Enter') {
+        valor.innerHTML = valor.innerHTML.slice(0, -1)
+        return result()
+    }
+})
 
-    if(valor != '+' && valor != '-' && valor != '*' && valor != '/' && valor != '' || n == 'number' || valor == '' && num == '-') {
-        document.form.textview.value = document.form.textview.value + num
+function insert(num) { 
+    let n = typeof num
+    if(valor.innerHTML != '+' && valor.innerHTML != '-' && valor.innerHTML != '*' && valor.innerHTML != '/' && valor.innerHTML != '' || n == 'number' || valor.innerHTML == '' && num == '-') {
+        valor.innerHTML += num
     }
 }
 
 function result() {
-    let res = document.form.textview.value
-    if(res.slice(-1) == '+' || res.slice(-1) == '-' || res.slice(-1) == '*' || res.slice(-1) == '/'){
-        let res = document.form.textview.value
-        document.form.textview.value = res.substring(0, res.length-1)
-    }else if(res) {
-        document.form.textview.value = eval(res)
+    if(valor.innerHTML.slice(-1) == '+' || valor.innerHTML.slice(-1) == '-' || valor.innerHTML.slice(-1) == '*' || valor.innerHTML.slice(-1) == '/'){
+        valor.innerHTML = valor.innerHTML.slice(0, -1)
+    }else if(valor.innerHTML) {
+        valor.innerHTML = eval(valor.innerHTML)
     } else {
         alert('[ERRO]Entrada inválida')
     }
 }
 
 function del() {
-    let res = document.form.textview.value
-    document.form.textview.value = res.substring(0, res.length-1)
+    valor.innerHTML = valor.innerHTML.slice(0, -1)
 }
 
 function cle() {
-    document.form.textview.value = null
+    valor.innerHTML = null
 }
